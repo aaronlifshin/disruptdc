@@ -13,3 +13,8 @@
 .bodytext_styled {
 	padding: 0 12% 0 12%; 
 }
+
+.bodybox_grey {
+	background-color:white;
+	color:#333333;
+}
