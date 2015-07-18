@@ -14,6 +14,7 @@ body {
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 2.5em;
 }
 
 .text-vertical-center {
@@ -28,6 +29,11 @@ body {
     font-size: 4.5em;
     font-weight: 700;
     color:white;
+}
+
+.text-vertical-center h2 {
+    font-size: 2em;
+	color:white;
 }
 
 .text-vertical-center h3 {
