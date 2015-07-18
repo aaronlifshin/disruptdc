@@ -212,6 +212,8 @@ hr.small {
 
 .sector .callout {
     height: auto;
+    margin: 25px auto 75px;
+    background: none;
 }
 
 .sector .nav-pills { max-width: 800px; margin: 15px auto;}
