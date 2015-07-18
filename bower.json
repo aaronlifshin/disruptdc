@@ -1,0 +1,12 @@
+{
+  "name": "disruptdc",
+  "version": "0.0.0",
+  "homepage": "https://github.com/aaronlifshin/disruptdc",
+  "authors": [
+    "Aaron Yang <aaronyangcs@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular-chart.js": "~0.7.2"
+  }
+}
