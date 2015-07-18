@@ -1,146 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <title>Disrupt DC - A Business Coalition for Innovation and Competition</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
 
-    <title>AARON TEST</title>
+    <script src="angular-fontawesome.js"></script>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="/bower_components/Chart.js/Chart.min.js"></script>
+    <script src="/bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <link rel="stylesheet" href="../bower_components/angular-chart.js/dist/angular-chart.css" />
 
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+  <link href="/css/stylish-portfolio.css" rel="stylesheet">
+  <link href="/css/disrupt-dc.css" rel="stylesheet">
+  <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+  <style type="text/css">
+  	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:400px;}
+  	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+  	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
 </head>
+<body ng-app="single-page-app">
 
-<body>
+    <div ng-include =
 
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
-            </li>
-            <li>
-                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
-            </li>
-            <li>
-                <a href="#about" onclick = $("#menu-close").click(); >About</a>
-            </li>
-            <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
-            </li>
-        </ul>
-    </nav>
 
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Start Bootstrap</h1>
-            <h3>Free Bootstrap Themes &amp; Templates</h3>
-            <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+
+
+
+
+  <!-- Navigation -->
+  <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><fa name="bars"></fa></a>
+  <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+          <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+          <li class="sidebar-brand">
+              <a href="#top" onclick = $("#menu-close").click(); >Disrupt DC</a>
+          </li>
+          <li>
+              <a href="#about" onclick = $("#menu-close").click(); >About Us</a>
+          </li>
+          <li>
+              <a href="#services" onclick = $("#menu-close").click(); >Explore</a>
+          </li>
+      </ul>
+  </nav>
+
+  <!-- Header -->
+  <header id="top" class="header">
+      <div class="text-vertical-center">
+          <img src="../img/DisruptDC-hero-logo.png" class="hero-logo"/>
+          <h3>A business coalition to restore competition and innovation by ending pay-to-play politics in DC</h3>
+          <br>
+          <!-- Begin MailChimp Signup Form -->
+          
+          <!-- Begin MailChimp Signup Form -->
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+          <style type="text/css">
+          	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+          	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+          	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+          </style>
+          <div id="mc_embed_signup" class="signup-form">
+              <form action="//disruptdc.us11.list-manage.com/subscribe/post?u=f5a94245404e3c420c8797dc3&amp;id=4fa84e8e21" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+              	<h2>Join the Coalition </h2>
+              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+              <div class="mc-field-group">
+              	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+              </label>
+              	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+              </div>
+              <div class="mc-field-group input-group">
+                  <strong>Business Owner? </strong>
+                  <ul><li><input type="checkbox" value="1" name="group[5105][1]" id="mce-group[5105]-5105-0"><label for="mce-group[5105]-5105-0">I represent a business</label></li>
+              </ul>
+              </div>
+              	<div id="mce-responses" class="clear">
+              		<div class="response" id="mce-error-response" style="display:none"></div>
+              		<div class="response" id="mce-success-response" style="display:none"></div>
+              	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_f5a94245404e3c420c8797dc3_4fa84e8e21" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                  </div>
+              </form>
+          </div>
+          
+          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+          <!--End mc_embed_signup-->
+      </div>
+  </header>
+
+  <!-- Callout -->
+  <aside class="callout">
+      <div class="text-vertical-center bodytext_styled bodybox_grey">
+          <h2>The American Dream was founded on disruption.</h2> 
+          <div>Innovation has created individual success and driven our country’s advancement in countless ways. Fostering the entrepreneurial spirit has paid dividends for generations by rewarding the best ideas, best products, and best service.</div>
+      </div>
+  </aside>
+  
+  <!-- Callout -->
+  <aside class="callout">
+      <div class="text-vertical-center alternate1 bodytext_styled">
+          <h2>But that's not how it works today</h2> 
+          <div>Special interests — corporations, unions, and a collection of ultra-wealthy individuals — all want what’s best for them. It’s natural. The problem is that they’ve become so adept at currying favor in Congress and skewing our laws in their favor that it’s diminishing opportunity for everyone else.</div>
+      </div>
+  </aside>
+  
+  <!-- Callout -->
+  <aside class="callout">
+      <div class="text-vertical-center bodytext_styled bodybox_grey">
+          <h2>The game is rigged</h2> 
+          <div>Whether it’s supplying campaign cash, funding super PACs, giving expensive gifts and perks, or providing high-paying lobbyist jobs, these special interests know how to get their way. It’s legalized bribery, and it’s paying off. Estimates for ROI on corporate lobbying run as high as 22,000%!
+</div>
+      </div>
+  </aside>
+  
+  <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+  <section id="services" class="services bg-primary">
+      <div class="container">
+          <div class="row text-center">
+              <div class="col-lg-10 col-lg-offset-1">
+                  <h2>Cronyism is killing innovation</h2>
+                  <div>The result is that instead of serving the public interest, our laws serve those who fund our elections.</div>
+                  <hr class="small">
+                  <div class="row">
+                      <div class="col-md-3 col-sm-6">
+                          <div class="service-item">
+                              <span class="fa-stack fa-4x">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                          </span>
+                              <p>Tax loopholes and rebates.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="service-item">
+                              <span class="fa-stack fa-4x">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                          </span>
+                              <p>Excessive regulation, licensing, and other restrictions on entering a market.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="service-item">
+                              <span class="fa-stack fa-4x">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                          </span>
+                              <p>Subsidies for yesterday’s interests.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="service-item">
+                              <span class="fa-stack fa-4x">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-shield fa-stack-1x text-primary"></i>
+                              </span>
+                              <p>Intellectual property laws that unnecessarily restrict the free flow of ideas.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- /.row (nested) -->
+              </div>
+              <!-- /.col-lg-10 -->
+          </div>
+          <!-- /.row -->
+      </div>
+      <!-- /.container -->
+  </section>
+
+  <!-- Callout -->
+  <aside class="callout">
+      <div class="text-vertical-center bodybox_grey">
+          <h2>It's a feeding frenzy</h2> 
+          <div class="bodytext_styled">The politicians are also in on this game of pay-to-play politics, letting potential funders know that if they don’t make a contribution, an upcoming vote may not go in their favor. Normally this is called extortion, but it's completely legal.
+</div>
+      </div>
+  </aside>
+
+    <!-- Callout -->
+    <aside class="callout">
+        <div class="text-vertical-center alternate1">
+            <h2>Self-government is the solution</h2> 
+            <div class="bodytext_styled"><p>DisruptDC will restore fairness to the American economy by: </p>
+				<ol>
+					<li>Building a broad coalition of businesses, technology leaders, and advocacy groups who support reform.</li>
+					<li>Publicizing our message and lobby the U.S. Congress to adopt our platform.</li>
+<li>Winning reform and breaking the systemic corruption of crony capitalism in DC.</li>
+	</ol>
+  </div>
         </div>
-    </header>
-
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    </aside>
+	
     <section id="services" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Our Services</h2>
+                    <h2>The DisruptDC Platform</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-4 col-sm-12">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-cloud fa-stack-1x text-primary"></i>
                             </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>Increase Transparency. Information helps businesses and consumers make better choices. Increasing transparency will help voters make better choices at the voting booth.</p>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-4 col-sm-12">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-compass fa-stack-1x text-primary"></i>
                             </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>End conflicts of interest. Meeting politicians to advocate for your cause is fine. But when money and favors are involved, corruption follows.</p>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-4 col-sm-12">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                </span>
+                                <p>Create New Sources of Funding. Encourage politicians to raise campaign cash from constituents — not outside groups, special interests, and wealthy funders — by setting up a voucher system and contribution matching.</p>
                             </div>
                         </div>
                     </div>
@@ -152,154 +246,99 @@
         </div>
         <!-- /.container -->
     </section>
-
+  
     <!-- Callout -->
     <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
+        <div class="text-vertical-center alternate1">
+            <h2>Join the fight for freedom!</h2> 
+            <div class="bodytext_styled">By outlawing cronyism between public officials and special interests, we will establish a level playing field where the best ideas can win. Join us!
+  </div>
         </div>
     </aside>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
+  <!-- Call to Action -->
+  <aside class="call-to-action bg-primary">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h3>The buttons below are impossible to resist.</h3>
+                  <a href="#" class="btn btn-lg btn-light">Click Me!</a>
+                  <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+              </div>
+          </div>
+      </div>
+  </aside>
 
-    <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
-                </div>
-            </div>
-        </div>
-    </aside>
+  <!-- Map -->
+  <!--<section id="contact" class="map">-->
+      <!--<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>-->
+      <!--<br />-->
+      <!--<small>-->
+          <!--<a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>-->
+      <!--</small>-->
+      <!--</iframe>-->
+  <!--</section>-->
 
-    <!-- Map -->
-    <!--<section id="contact" class="map">-->
-        <!--<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>-->
-        <!--<br />-->
-        <!--<small>-->
-            <!--<a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>-->
-        <!--</small>-->
-        <!--</iframe>-->
-    <!--</section>-->
-
-    <!-- Footer -->
-    <footer>
-        <div id="contact" class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Start Bootstrap</strong>
-                    </h4>
-                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
+  <!-- Footer -->
+  <footer>
+      <div id="contact" class="container">
+          <div class="row">
+              <div class="col-lg-10 col-lg-offset-1 text-center">
+                  <h4><strong>DisruptDC</strong>
+                  </h4>
+                  <p>San Francisco, CA</p>
+                  <ul class="list-unstyled">
+                      <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="info@disruptdc.org">info@disruptdc.org</a>
+                      </li>
+                  </ul>
+                  <br>
+                  <ul class="list-inline">
+                      <li>
+                          <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                      </li>
+                      <li>
+                          <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                      </li>
+                      <li>
+                          <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                      </li>
+                  </ul>
+                  <hr class="small">
+                  <p class="text-muted">Copyright &copy; DisruptDC 2015</p>
+              </div>
+          </div>
+      </div>
+  </footer>
 
 </body>
+<script>
+// Closes the sidebar menu
+$("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
 
+// Opens the sidebar menu
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Scrolls to the selected menu item on the page
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+</script>
 </html>
