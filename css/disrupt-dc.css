@@ -29,3 +29,10 @@
 	color:#333333;
 }
 
+.selfgov {
+    background: url(../img/lincoln-memorial.jpg) no-repeat center center scroll;
+}
+
+.leftlist {
+	text-align: left;
+}
