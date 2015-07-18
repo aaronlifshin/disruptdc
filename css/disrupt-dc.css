@@ -20,8 +20,20 @@
   opacity: 0.8;
 }
 
+.small-logo {
+  height: 40px;
+}
+
 .bodybox_grey {
 	background-color:white;
 	color:#333333;
 }
 
+.disrupt-navbar {
+  background-color:#333;
+  color:white;
+}
+
+.disrupt-link {
+  color: white !important;
+}

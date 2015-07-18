@@ -4,23 +4,24 @@
   <meta charset="UTF-8">
   <title>Disrupt DC - A Business Coalition for Innovation and Competition</title>
 
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
- <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
-    <script src="bower_components/Chart.js/Chart.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+ <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
 
     <script src="angular-fontawesome.js"></script>
 
-    <script src="/bower_components/Chart.js/Chart.min.js"></script>
-    <script src="/bower_components/angular-chart.js/dist/angular-chart.js"></script>
-    <link rel="stylesheet" href="../bower_components/angular-chart.js/dist/angular-chart.css" />
+    <script src="bower_components/Chart.js/Chart.min.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
 
-  <link href="/css/stylish-portfolio.css" rel="stylesheet">
-  <link href="/css/disrupt-dc.css" rel="stylesheet">
-  <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
 
@@ -29,12 +30,32 @@
   	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
   	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
   </style>
+    <link href="css/disrupt-dc.css" rel="stylesheet">
 </head>
 <body ng-app="single-page-app">
 
-
-
   <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top disrupt-navbar">
+      <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src='img/DisruptDC-logo-white.png' class="small-logo"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a href="sector.html" class="disrupt-link">Cronyism Index</a></li>
+                  <li><a href="corpROI.html" class="disrupt-link">Corporate Influence ROI</a></li>
+                </ul>
+          </div>
+        </div>
+  </nav>
+  
   <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><fa name="bars"></fa></a>
   <nav id="sidebar-wrapper">
       <ul class="sidebar-nav">
@@ -54,13 +75,13 @@
   <!-- Header -->
   <header id="top" class="header">
       <div class="text-vertical-center">
-          <img src="../img/DisruptDC-hero-logo.png" class="hero-logo"/>
+          <img src="img/DisruptDC-hero-logo.png" class="hero-logo"/>
           <h3>A business coalition to restore competition and innovation by ending pay-to-play politics in DC</h3>
           <br>
           <!-- Begin MailChimp Signup Form -->
           
           <!-- Begin MailChimp Signup Form -->
-          <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+          <link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
           <style type="text/css">
           	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
           	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
@@ -91,7 +112,7 @@
               </form>
           </div>
           
-          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+          <script type='text/javascript' src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
           <!--End mc_embed_signup-->
       </div>
   </header>
@@ -175,7 +196,7 @@
                           <div class="service-item">
                               <span class="fa-stack fa-4x">
                               <i class="fa fa-circle fa-stack-2x"></i>
-                              <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                              <i class="fa fa-dollar fa-stack-1x text-primary"></i>
                           </span>
                               <p>Tax loopholes and rebates.</p>
                           </div>
@@ -184,7 +205,7 @@
                           <div class="service-item">
                               <span class="fa-stack fa-4x">
                               <i class="fa fa-circle fa-stack-2x"></i>
-                              <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                              <i class="fa fa-cogs fa-stack-1x text-primary"></i>
                           </span>
                               <p>Excessive regulation, licensing, and other restrictions on entering a market.</p>
                           </div>
@@ -193,7 +214,7 @@
                           <div class="service-item">
                               <span class="fa-stack fa-4x">
                               <i class="fa fa-circle fa-stack-2x"></i>
-                              <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                              <i class="fa fa-ambulance fa-stack-1x text-primary"></i>
                           </span>
                               <p>Subsidies for yesterday’s interests.</p>
                           </div>
@@ -202,7 +223,7 @@
                           <div class="service-item">
                               <span class="fa-stack fa-4x">
                               <i class="fa fa-circle fa-stack-2x"></i>
-                              <i class="fa fa-shield fa-stack-1x text-primary"></i>
+                              <i class="fa fa-lightbulb-o fa-stack-1x text-primary"></i>
                               </span>
                               <p>Intellectual property laws that unnecessarily restrict the free flow of ideas.</p>
                           </div>
@@ -251,7 +272,7 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                                <i class="fa fa-search fa-stack-1x text-primary"></i>
                             </span>
                                 <p>Increase Transparency. Information helps businesses and consumers make better choices. Increasing transparency will help voters make better choices at the voting booth.</p>
                             </div>
@@ -260,7 +281,7 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                                <i class="fa fa-gavel fa-stack-1x text-primary"></i>
                             </span>
                                 <p>End conflicts of interest. Meeting politicians to advocate for your cause is fine. But when money and favors are involved, corruption follows.</p>
                             </div>
@@ -269,7 +290,7 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
+                                <i class="fa fa-users fa-stack-1x text-primary"></i>
                                 </span>
                                 <p>Create New Sources of Funding. Encourage politicians to raise campaign cash from constituents — not outside groups, special interests, and wealthy funders — by setting up a voucher system and contribution matching.</p>
                             </div>
