@@ -203,6 +203,27 @@ hr.small {
     -o-background-size: cover;
 }
 
+
+/* Sector .html */
+
+.sectors {
+    margin-top: 50px;
+}
+
+.sector .callout {
+    height: auto;
+}
+
+.sector .nav-pills { max-width: 800px; margin: 15px auto;}
+
+.sector .nav-pills li a { font-size: 0.6em;}
+
+.sector .nav-pills li.active a { background-color: orange ;}
+
+
+
+.sector .politicians ol li { display: list-item; font-size: 0.6em;}
+
 /* Portfolio */
 
 .portfolio {
