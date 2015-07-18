@@ -33,7 +33,7 @@ body {
 
 .text-vertical-center h2 {
     font-size: 2em;
-	color:white;
+	padding: 0 5% 0 5%;
 }
 
 .text-vertical-center h3 {
