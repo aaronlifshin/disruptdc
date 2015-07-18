@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
 
   <link href="css/stylish-portfolio.css" rel="stylesheet">
-  <link href="css/disrupt-dc.css" rel="stylesheet">
+
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
@@ -28,11 +28,12 @@
   	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
   	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
   </style>
+    <link href="css/disrupt-dc.css" rel="stylesheet">
 </head>
 <body ng-app="single-page-app">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top disrupt-navbar">
       <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -42,11 +43,12 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src='img/DisruptDC-logo.png' class="small-logo"></a>
+            <a class="navbar-brand" href="#"><img src='img/DisruptDC-logo-white.png' class="small-logo"></a>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li><a href="corpROI.html">Explore Corporate ROI</a></li>
+                  <li><a href="sector.html" class="disrupt-link">Cronyism Index</a></li>
+                  <li><a href="corpROI.html" class="disrupt-link">Corporate Influence ROI</a></li>
                 </ul>
           </div>
         </div>
