@@ -1,0 +1,34 @@
+{
+  "Organization": {
+    "Goldman_Sachs": {
+      "Contributions": "16532620",
+      "Lobbying": "21440000",
+      "Federal_Business": "21682741581",
+      "Federal_Support": "207667900000"
+    },
+    "Bank_of_America": {
+      "Contributions": "12596049",
+      "Lobbying": "32,574,000",
+      "Federal_Business": "19110189065",
+      "Federal_Support": "457067022207"
+    },
+    "AT&T_Inc": {
+      "Contributions": "12432809",
+      "Lobbying": "99446535",
+      "Federal_Business": "2024056121",
+      "Federal_Support": "1770975"
+    },
+    "Honeywell_International": {
+      "Contributions": "10444250",
+      "Lobbying": "38432000",
+      "Federal_Business": "10011829117",
+      "Federal_Support": "47324432"
+    },
+    "JPMorgan_Chase_Co": {
+      "Contributions": "10421875",
+      "Lobbying": "41640000",
+      "Federal_Business": "18020035703",
+      "Federal_Support": "485642436807"
+    }
+  }
+}
