@@ -13,7 +13,12 @@
   <script src="script.js"></script>
   <script src="angular-fontawesome.js"></script>
 
-  <link href="../css/stylish-portfolio.css" rel="stylesheet">
+    <script src="../bower_components/Chart.js/Chart.min.js"></script>
+    <script src="../bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <link rel="stylesheet" href="../bower_components/angular-chart.js/dist/angular-chart.css" />
+
+
+    <link href="../css/stylish-portfolio.css" rel="stylesheet">
   <link href="../css/disrupt-dc.css" rel="stylesheet">
   <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -25,9 +30,48 @@
   </style>
 </head>
 <body ng-app="single-page-app">
+
+<body>
+<div style="width: 50%">
+    <canvas id="canvas" height="450" width="600"></canvas>
+</div>
+
+<script>
+    var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+
+    var barChartData = {
+        labels : ["January","February","March","April","May","June","July"],
+        datasets : [
+            {
+                fillColor : "rgba(220,220,220,0.5)",
+                strokeColor : "rgba(220,220,220,0.8)",
+                highlightFill: "rgba(220,220,220,0.75)",
+                highlightStroke: "rgba(220,220,220,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            },
+            {
+                fillColor : "rgba(151,187,205,0.5)",
+                strokeColor : "rgba(151,187,205,0.8)",
+                highlightFill : "rgba(151,187,205,0.75)",
+                highlightStroke : "rgba(151,187,205,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+
+    }
+    window.onload = function(){
+        var ctx = document.getElementById("canvas").getContext("2d");
+        window.myBar = new Chart(ctx).Bar(barChartData, {
+            responsive : true
+        });
+    }
+
+</script>
+</body>
+
   <div class = "corpROI">
-    <button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom"></button>
-    <button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom">Bank of America</button>
+    <button ng-click = "console.log('hello')" ng-model = "corpROI.selectedCom"></button>
+    <button ng-click = "console.log('hello')" ng-model = "corpROI.selectedCom">Bank of America</button>
     <button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom">AT&T Inc</button>
     <button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom">Honeywell International</button>
     <button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom">JPMorgan Chase & Co</button>

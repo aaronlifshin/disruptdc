@@ -18,7 +18,18 @@ app.config(function($routeProvider){
 
 app.controller('cfgController',function($scope){
 
-      $scope.message="Hello world";
+    $scope.message="Hello world";
+
+    $scope.load = function () {
+        alert("load event detected!");
+    }
+
+    window.onload = function(){
+        var ctx = document.getElementById("canvas").getContext("2d");
+        window.myBar = new Chart(ctx).Bar(barChartData, {
+            responsive : true
+        });
+
 
 });
 
