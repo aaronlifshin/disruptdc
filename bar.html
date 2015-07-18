@@ -2,44 +2,231 @@
 <html>
 	<head>
 		<title>Bar Chart</title>
-		<script src="../Chart.js"></script>
+		<script src="bower_components/Chart.js/Chart.js"></script>
 	</head>
 	<body>
-		<div style="width: 50%">
-			<canvas id="canvas" height="450" width="600"></canvas>
+		<div style="">
+			<canvas id="canvas" height="500" width="1200"></canvas>
 		</div>
 
+		<div style="">
+			<canvas id="canvas2" height="500" width="1200"></canvas>
+		</div>
 
 	<script>
 	var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
 
-	var barChartData = {
-		labels : ["January","February","March","April","May","June","July"],
+	var corps = [{
+		"Organization": [
+
+
+			 {  "name": "Goldman_Sachs",
+				"Contributions": "16532620",
+				"Lobbying": "21440000",
+				"Federal_Business": "21682741581",
+				"Federal_Support": "207667900000"
+			 },
+
+			{   "name": "Bank_of_America",
+				"Contributions": "12596049",
+				"Lobbying": "32574000",
+				"Federal_Business": "19110189065",
+				"Federal_Support": "457067022207"
+			},
+
+			{	"name": "AT&T_Inc",
+				"Contributions": "12432809",
+				"Lobbying": "99446535",
+				"Federal_Business": "2024056121",
+				"Federal_Support": "1770975"
+			},
+
+			{	"name": "Honeywell_International",
+				"Contributions": "10444250",
+				"Lobbying": "38432000",
+				"Federal_Business": "10011829117",
+				"Federal_Support": "47324432"
+			},
+
+			{	"name": "JPMorgan_Chase_Co",
+				"Contributions": "10421875",
+				"Lobbying": "41640000",
+				"Federal_Business": "18020035703",
+				"Federal_Support": "485642436807"
+			},
+
+			{   "name": "Microsoft_Corp",
+				"Contributions": "9817171",
+				"Lobbying": "46951000",
+				"Federal_Business": "715540121",
+				"Federal_Support": "7019300"
+			},
+
+			{	"name": "Comcast_Corp",
+				"Contributions": "9786857",
+				"Lobbying": "81311323",
+				"Federal_Business": "27318791",
+				"Federal_Support": "0"
+			},
+
+			{	"name": "Deloitte_LLP",
+				"Contributions": "9070686",
+				"Lobbying": "15080000",
+				"Federal_Business": "6350936269",
+				"Federal_Support": "44779312"
+			},
+
+			{	"name": "Lockhead_Martin",
+				"Contributions": "8558992",
+				"Lobbying": "84138853",
+				"Federal_Business": "204156379469",
+				"Federal_Support": "127757309"
+			},
+
+			{	"name": "Morgan_Stanley",
+				"Contributions": "8476333",
+				"Lobbying": "16890000",
+				"Federal_Business": "11566283640",
+				"Federal_Support": "115899600000"
+			}
+		]
+	}];
+
+	console.log(Number(corps[0].Organization[9].Contributions) + Number(corps[0].Organization[9].Lobbying));
+
+	var totalSpending = [];
+	for (i = 0; i < corps[0].Organization.length; i++){
+		totalSpending.push(Number(corps[0].Organization[i].Contributions) + Number(corps[0].Organization[i].Lobbying));
+	}
+
+	var totalGovernmentBenefit = [];
+	for (i = 0; i < corps[0].Organization.length; i++){
+		totalGovernmentBenefit.push((Number(corps[0].Organization[i].Federal_Business) + Number(corps[0].Organization[i].Federal_Support)));
+	}
+
+	var scaledGovernmentBenefit = []
+	for (i = 0; i < corps[0].Organization.length; i++){
+		scaledGovernmentBenefit.push(totalGovernmentBenefit[i]/1000);
+	}
+
+	var ROI = []
+	for (i = 0; i < corps[0].Organization.length; i++){
+		ROI.push((totalGovernmentBenefit[i]-totalSpending[i])/totalSpending[i]);
+	}
+
+	console.log(totalSpending);
+	console.log(totalGovernmentBenefit);
+	console.log(ROI);
+
+	var corpsNames = ["Goldman Sachs","Bank Of America","AT&T","Honeywell International","JP Morgan Chase","Microsoft","Comcast",
+		"Deloitte LLP", "Lockhead Martin", "Morgan Stanley"];
+
+	var corpsAndROI = [];
+
+	for (i = 0; i < corps[0].Organization.length; i++){
+		corpsAndROI.push(corpsNames[i] + "\n ROI: " + Math.floor(ROI[i]) + "x");
+	}
+
+	var corpsAndR = "sadf" + "--safds";
+	console.log(corpsAndROI1);
+
+	var corpsAndROI1 = [];
+	var totalSpending1 = [];
+	var scaledGovernmentBenefit1 = [];
+	for(i = 0; i<3 ; i++){
+		corpsAndROI1.push(corpsAndROI[i]);
+		totalSpending1.push(totalSpending[i]);
+		scaledGovernmentBenefit1.push(scaledGovernmentBenefit[i]);
+	}
+
+
+	var corpsAndROI2 = [];
+	var totalSpending2 = [];
+	var scaledGovernmentBenefit2 = [];
+	for(i = 3; i<6 ; i++){
+		corpsAndROI2.push(corpsAndROI[i]);
+		totalSpending2.push(totalSpending[i]);
+		scaledGovernmentBenefit2.push(scaledGovernmentBenefit[i]);
+	}
+
+	var corpsAndROI3 = [];
+	var totalSpending3 = [];
+	var scaledGovernmentBenefit3 = [];
+	for(i = 7; i<10 ; i++){
+		corpsAndROI3.push(corpsAndROI[i]);
+		totalSpending3.push(totalSpending[i]);
+		scaledGovernmentBenefit3.push(scaledGovernmentBenefit[i]);
+	}
+
+
+
+	var barChartData1 = {
+		labels : corpsAndROI1,
+
 		datasets : [
 			{
 				fillColor : "rgba(220,220,220,0.5)",
 				strokeColor : "rgba(220,220,220,0.8)",
 				highlightFill: "rgba(220,220,220,0.75)",
 				highlightStroke: "rgba(220,220,220,1)",
-				data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				data : totalSpending1
 			},
 			{
 				fillColor : "rgba(151,187,205,0.5)",
 				strokeColor : "rgba(151,187,205,0.8)",
 				highlightFill : "rgba(151,187,205,0.75)",
 				highlightStroke : "rgba(151,187,205,1)",
-				data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				data : scaledGovernmentBenefit1
 			}
 		]
 
-	}
+	};
+
+	var barChartData2 = {
+		labels : corpsAndROI2,
+
+		datasets : [
+			{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,0.8)",
+				highlightFill: "rgba(220,220,220,0.75)",
+				highlightStroke: "rgba(220,220,220,1)",
+				data : totalSpending2
+			},
+			{
+				fillColor : "rgba(151,187,205,0.5)",
+				strokeColor : "rgba(151,187,205,0.8)",
+				highlightFill : "rgba(151,187,205,0.75)",
+				highlightStroke : "rgba(151,187,205,1)",
+				data : scaledGovernmentBenefit2
+			}
+		]
+
+	};
 	window.onload = function(){
 		var ctx = document.getElementById("canvas").getContext("2d");
-		window.myBar = new Chart(ctx).Bar(barChartData, {
+		window.myBar = new Chart(ctx).Bar(barChartData1, {
+			responsive : true
+		});
+
+		var ctx2 = document.getElementById("canvas2").getContext("2d");
+		window.myBar = new Chart(ctx2).Bar(barChartData2, {
 			responsive : true
 		});
 	}
-
 	</script>
 	</body>
+
+	<div class = "corpROI">
+		<button ng-click = "console.log('hello')" ng-model = "corpROI.selectedCom"></button>
+		<button ng-click = "console.log('hello')" ng-model = "corpROI.selectedCom">Bank of America</button>
+		<button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom">AT&T Inc</button>
+		<button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom">Honeywell International</button>
+		<button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom">JPMorgan Chase & Co</button>
+		<button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom">Microsoft Corp</button>
+		<button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom">Comcast Corp</button>
+		<button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom">Deloitte LLP</button>
+		<button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom">Lockheed Martin</button>
+		<button ng-click = "corpROI.getCompanyInfo(Goldman_Sachs)" ng-model = "corpROI.selectedCom">Morgan Stanley</button>
+	</div>
 </html>
