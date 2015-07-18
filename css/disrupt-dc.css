@@ -36,3 +36,12 @@
 .leftlist {
 	text-align: left;
 }
+
+.disrupt-navbar {
+  background-color:#333;
+  color:white;
+}
+
+.disrupt-link {
+  color: white !important;
+}
