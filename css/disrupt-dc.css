@@ -20,6 +20,10 @@
   opacity: 0.8;
 }
 
+.logo-small {
+  height: 60px;
+}
+
 .bodybox_grey {
 	background-color:white;
 	color:#333333;
