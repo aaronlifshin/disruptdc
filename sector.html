@@ -174,12 +174,12 @@ var data = [
 		<div class="col-md-9">
 
 			<div class="row">
-				<div style="width: 49%;float:left">
-				    <canvas id="canvas" height="350" width="350"></canvas>
+				<div class="canvascontainer">
+				    <canvas id="canvas" class="chartcanvas"></canvas>
 				    
 				</div>
-				<div style="width:49%;float:left">
-					<canvas id="canvas2" height="350" width="350"></canvas>
+				<div class="canvascontainer">
+					<canvas id="canvas2" class="chartcanvas"></canvas>
 				</div>
 
 			</div>
@@ -221,25 +221,8 @@ var data = [
 		</div>
 	</div>
 	  
-	  <aside class="callout">
-
-	      <div class="text-vertical-center bodytext_styled bodybox_grey">
-
-	          <h2>The American Dream was founded on disruption.</h2> 
-	          <div>Innovation has created individual success and driven our country’s advancement in countless ways. Fostering the entrepreneurial spirit has paid dividends for generations by rewarding the best ideas, best products, and best service.</div>
-	      </div>
-	  </aside>
-	  
-	  <!-- Callout -->
-	  <aside class="callout">
-	     
-			<div ng-controller="sectorController">
-
-
-			</div>
-
-	  </aside>
-  
+	 
+	 
  </div> <!-- containers -->
   
     <!-- Callout -->
@@ -266,7 +249,7 @@ var data = [
           <!-- Begin MailChimp Signup Form -->
           <link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
           <style type="text/css">
-          	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; color: black}
+          	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; color: black ; margin-top: 40px;}
           	#mc_embed_signup_scroll label {color: black;}
           	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
           	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
@@ -274,7 +257,6 @@ var data = [
           <div id="mc_embed_signup" class="signup-form">
               <form action="//disruptdc.us11.list-manage.com/subscribe/post?u=f5a94245404e3c420c8797dc3&amp;id=4fa84e8e21" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                   <div id="mc_embed_signup_scroll">
-              	<h2>Join the Coalition </h2>
               <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
               <div class="mc-field-group">
               	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
@@ -283,7 +265,7 @@ var data = [
               </div>
               <div class="mc-field-group input-group">
                   <strong>Business Owner? </strong>
-                  <ul><li><input type="checkbox" value="1" name="group[5105][1]" id="mce-group[5105]-5105-0"><label for="mce-group[5105]-5105-0">I represent a business</label></li>
+                  <ul><li><input type="checkbox" value="1" name="group[5105][1]" id="mce-group[5105]-5105-0"><label for="mce-group[5105]-5105-0">&nbsp; I represent a business</label></li>
               </ul>
               </div>
               	<div id="mce-responses" class="clear">
@@ -302,10 +284,10 @@ var data = [
 
 
               		<br />
-
+<!-- 
                   <h3>The buttons below are impossible to resist.</h3>
                   <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                  <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+                  <a href="#" class="btn btn-lg btn-dark">Look at Me!</a> -->
               </div>
           </div>
       </div>
