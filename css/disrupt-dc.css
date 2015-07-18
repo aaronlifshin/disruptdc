@@ -6,6 +6,10 @@
   margin: 0 auto;
 }
 
+.signup-form h2 {
+  color: #333;
+}
+
 .bodytext_styled {
 	padding: 0 15% 0 15%; 
 }
