@@ -36,24 +36,35 @@
 
 var data = [
 		    {
-		        value: 300,
-		        color:"#F7464A",
-		        highlight: "#FF5A5E",
-		        label: "Red"
+		        value: 390,
+		        color:"#999",
+		        highlight: "#aaa",
+		        label: "90% of the contributors"
 		    },
 		    {
 		        value: 50,
-		        color: "#46BFBD",
-		        highlight: "#5AD3D1",
-		        label: "Green"
-		    },
-		    {
-		        value: 100,
-		        color: "#FDB45C",
-		        highlight: "#FFC870",
-		        label: "Yellow"
+		        color: "#ffa705",
+		        highlight: "#ffc705",
+		        label: "Top 10% Contributors"
 		    }
 		]
+
+
+var data2 = [
+		    {
+		        value: 330,
+		        color:"#ffa705",
+		        highlight: "#ffc705",
+		        label: "Top 10% Contributors"
+		    },
+		    {
+		        value: 90,
+		        color: "#999",
+		        highlight: "#aaa",
+		        label: "90% of the contributors"
+		    }
+		]
+
 
     // var barChartData = {
 
@@ -88,7 +99,7 @@ var data = [
         });
 
      var ctx = document.getElementById("canvas2").getContext("2d");
-        window.myBar = new Chart(ctx).Pie(data, {
+        window.myBar = new Chart(ctx).Pie(data2, {
             segmentStrokeColor  : "fff",
             segmentShowStroke: false
         });
@@ -105,7 +116,7 @@ var data = [
 <body ng-app="single-page-app" class="sector">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top disrupt-navbar">
       <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -115,11 +126,12 @@ var data = [
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src='img/DisruptDC-logo.png' class="small-logo"></a>
+            <a class="navbar-brand" href="index.html"><img src='img/DisruptDC-logo-navbar.png' class="small-logo"></a>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li><a href="corpROI.html">Explore Corporate ROI</a></li>
+                  <li><a href="sector.html" class="disrupt-link active">Cronyism Index</a></li>
+                  <li><a href="corpROI.html" class="disrupt-link">Corporate Influence ROI</a></li>
                 </ul>
           </div>
         </div>
