@@ -1,0 +1,64 @@
+Corporate_data = [{
+  "Organization": {
+    "Goldman_Sachs": {
+      "Contributions": "16532620",
+      "Lobbying": "21440000",
+      "Federal_Business": "21682741581",
+      "Federal_Support": "207667900000"
+    },
+    "Bank_of_America": {
+      "Contributions": "12596049",
+      "Lobbying": "32574000",
+      "Federal_Business": "19110189065",
+      "Federal_Support": "457067022207"
+    },
+    "AT&T_Inc": {
+      "Contributions": "12432809",
+      "Lobbying": "99446535",
+      "Federal_Business": "2024056121",
+      "Federal_Support": "1770975"
+    },
+    "Honeywell_International": {
+      "Contributions": "10444250",
+      "Lobbying": "38432000",
+      "Federal_Business": "10011829117",
+      "Federal_Support": "47324432"
+    },
+    "JPMorgan_Chase_Co": {
+      "Contributions": "10421875",
+      "Lobbying": "41640000",
+      "Federal_Business": "18020035703",
+      "Federal_Support": "485642436807"
+    },
+    "Microsoft_Corp": {
+      "Contributions": "9817171",
+      "Lobbying": "46951000",
+      "Federal_Business": "715540121",
+      "Federal_Support": "7019300"
+    },
+    "Comcast_Corp": {
+      "Contributions": "9786857",
+      "Lobbying": "81311323",
+      "Federal_Business": "27318791",
+      "Federal_Support": "0"
+    },
+    "Deloitte_LLP": {
+      "Contributions": "9070686",
+      "Lobbying": "15080000",
+      "Federal_Business": "6350936269",
+      "Federal_Support": "44779312"
+    },
+    "Lockhead_Martin": {
+      "Contributions": "8558992",
+      "Lobbying": "84138853",
+      "Federal_Business": "204156379469",
+      "Federal_Support": "127757309"
+    },
+    "Morgan_Stanley": {
+      "Contributions": "8476333",
+      "Lobbying": "16890000",
+      "Federal_Business": "11566283640",
+      "Federal_Support": "115899600000"
+    }
+  }
+}]
