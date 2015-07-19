@@ -57,6 +57,8 @@
 		</div>
 
 	<script>
+		var barChart;
+		var barChartData;
 	var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
 
 	var corps = [{
@@ -246,18 +248,50 @@
 		]
 	};
 	window.onload = function(){
-		// var ctx = document.getElementById("canvas").getContext("2d");
-		loadCompany(0);
-		// window.myBar = new Chart(ctx).Bar(barChartData1, {
-		// 	responsive : true
-		// });
-	};
 
-	loadCompany = function(company) {
-		var companyName = corpsNames[company];
+		var companyName = corpsAndROI[0];
 		console.log(companyName);
 
-		var barChartData = {
+		barChartData = {
+			labels :[companyName],
+			datasets : [
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,0.8)",
+					highlightFill : "rgba(151,187,205,0.75)",
+					highlightStroke : "rgba(151,187,205,1)",
+					data : [totalSpending[0]]
+				},
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,0.8)",
+					highlightFill : "rgba(151,187,205,0.75)",
+					highlightStroke : "rgba(151,187,205,1)",
+					data : [scaledGovernmentBenefit2[0]]
+				}
+			]
+		};
+
+		console.log(corpsNames);
+		console.log(totalSpending);
+
+		var ctx = document.getElementById("canvas").getContext("2d");
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+		barChart = new Chart(ctx).Bar(barChartData, {
+			responsive :true
+		});
+		//window.myBar = barChart;
+
+	};
+
+
+	loadCompany = function(company) {
+
+		companyName = corpsAndROI[company];
+		console.log(companyName);
+
+		barChartData = {
 			labels :[companyName],
 			datasets : [
 				{
@@ -272,13 +306,15 @@
 					strokeColor : "rgba(151,187,205,0.8)",
 					highlightFill : "rgba(151,187,205,0.75)",
 					highlightStroke : "rgba(151,187,205,1)",
-					data : [scaledGovernmentBenefit2[company]]
+					data : [scaledGovernmentBenefit[company]]
 				}
 			]
 		};
+
+
+		barChart.datasets = barChartData;
 		var ctx = document.getElementById("canvas").getContext("2d");
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		window.myBar = new Chart(ctx).Bar(barChartData, {
+		barChart = new Chart(ctx).Bar(barChartData, {
 			responsive :true
 		});
 	};
