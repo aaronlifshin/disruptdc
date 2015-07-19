@@ -47,7 +47,7 @@ var data = [
 		        highlight: "#ffc705",
 		        label: "Top 0.77% Contributors"
 		    }
-		]
+		];
 
 
 var data2 = [
@@ -63,7 +63,31 @@ var data2 = [
 		        highlight: "#aaa",
 		        label: "99.23% of the contributors"
 		    }
-		]
+		];
+
+
+var rerender = function(v1,v2){
+  var data2 = [
+        {
+            value: v1,
+            color:"#ffa705",
+            highlight: "#ffc705",
+            label: "Top 0.77% Contributors"
+        },
+        {
+            value: v2,
+            color: "#999",
+            highlight: "#aaa",
+            label: "99.23% of the contributors"
+        }
+    ];
+
+      var ctx = document.getElementById("canvas2").getContext("2d");
+         window.myBar = new Chart(ctx).Pie(data2, {
+             segmentStrokeColor  : "fff",
+             segmentShowStroke: false
+         });
+}
 
 
     // var barChartData = {
@@ -172,18 +196,18 @@ var data2 = [
 	 	<div class="col-md-3">
 
 			  <ul class="nav nav-pills nav-stacked">
-			  <li role="presentation"><a href="#">Agribusiness</a></li>
-			  <li role="presentation"><a href="#">Communications/Electronics</a></li>
-			  <li role="presentation"><a href="#">Construction</a></li>
-			  <li role="presentation"><a href="#">Defense</a></li>
-			  <li role="presentation"><a href="#">Energy &amp; Natural Resources</a></li>
-			  <li role="presentation" class="active"><a href="#">Finance, Insurance &amp; Real Estate</a></li>
-			  <li role="presentation"><a href="#">Health</a></li>
-			  <li role="presentation"><a href="#">Lawyers &amp; Lobbyists</a></li>
-			  <li role="presentation"><a href="#">Transportation</a></li>
-			  <li role="presentation"><a href="#">Misc Business</a></li>
-			  <li role="presentation"><a href="#">Labor</a></li>
-			  <li role="presentation"><a href="#">Ideological/Single-Issue</a></li>
+			  <li role="presentation"><a href="#"  onclick="rerender(10649633,2348979)">Agribusiness</a></li>
+			  <li role="presentation"><a href="#" onclick="rerender(22725284,5439095)">Communications/Electronics</a></li>
+			  <li role="presentation"><a href="#" class="disabled" onclick="rerender(100,250)">Construction</a></li>
+			  <li role="presentation"><a href="#" class="disabled" onclick="rerender(100,250)">Defense</a></li>
+			  <li role="presentation"><a href="#" onclick="rerender(23049297,4181445)">Energy &amp; Natural Resources</a></li>
+			  <li role="presentation"><a href="#" onclick="rerender(79082084,18819498)">Finance, Insurance &amp; Real Estate</a></li>
+			  <li role="presentation"><a href="#" onclick="rerender(39523180,10002579)">Health</a></li>
+			  <li role="presentation"><a href="#" class="disabled" onclick="rerender(100,250)">Lawyers &amp; Lobbyists</a></li>
+			  <li role="presentation"><a href="#" class="disabled" onclick="rerender(100,250)">Transportation</a></li>
+			  <li role="presentation"><a href="#" class="disabled" onclick="rerender(100,250)">Misc Business</a></li>
+			  <li role="presentation"><a href="#" class="disabled" onclick="rerender(100,250)">Labor</a></li>
+			  <li role="presentation"><a href="#" class="disabled" onclick="rerender(100,250)">Ideological/Single-Issue</a></li>
 			</ul>
 		</div>
 		<div class="col-md-8">

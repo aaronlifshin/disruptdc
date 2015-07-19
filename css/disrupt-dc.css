@@ -10,6 +10,7 @@
 .navbar-nav>li>a {
 	color: orange !important;
 }
+.sector .nav-pills li a.disabled { opacity: 0.2;}
 
 .navbar-nav>li>a.active {
 	border-bottom: solid 4px orange;
