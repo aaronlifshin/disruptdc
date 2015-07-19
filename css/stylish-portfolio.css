@@ -38,6 +38,8 @@ body {
 
 .text-vertical-center h3 {
     color:white;
+	font-size: 1.75em;
+	padding: 0 5% 0 5%;
 }
 
 /* Custom Button Styles */
