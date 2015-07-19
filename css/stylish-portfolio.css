@@ -222,7 +222,17 @@ hr.small {
 
 .sector .nav-pills li.active a { background-color: orange ;}
 
+.sector .chartcanvas { 
+    height: 310px;
+    width: 310px;
 
+}
+
+
+.sector .canvascontainer {
+    width: 35%;float:left;
+    margin: 50px;
+}
 
 .sector .politicians ol li { display: list-item; font-size: 0.6em;}
 
